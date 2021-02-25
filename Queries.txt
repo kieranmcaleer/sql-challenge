@@ -21,3 +21,16 @@ select DE.emp_no, E.last_name, E.first_name, D.dept_name
 FROM dept_emp as DE
 	INNER JOIN Employees as E on DE.emp_no = E.emp_no
 	INNER JOIN Departments as D on DE.dept_no = D.dept_no;
+
+--5
+
+select first_name, last_name, sex
+FROM employees
+WHERE first_name = 'Hercules' and last_name like 'B%';
+
+--6
+select E.emp_no, E.last_name, E.first_name, D.dept_name
+FROM Employees as E
+	INNER JOIN Dept_emp as DE on E.emp_no = DE.emp_no
+	INNER JOIN Departments as D on DE.dept_no = D.dept_no
+	WHERE D.dept_name = 'Sales';
